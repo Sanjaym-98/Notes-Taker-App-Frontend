@@ -7,7 +7,7 @@ const PostView = () => {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("token"));
 
-    axios("http://localhost:5000/api/v1/notes", {
+    axios("https://notesbackend-ware.onrender.com/api/v1/notes", {
       method: "GET",
       headers: {
         Authorization: token,

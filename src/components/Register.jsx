@@ -15,7 +15,7 @@ const SignUp=()=>{
             setconfirmpassword(false); 
         }
 
-        axios.post('http://localhost:5000/api/v1/register',data)
+        axios.post('https://notesbackend-ware.onrender.com/api/v1/register',data)
         .then(result=>{
             console.log(data);
             console.log(result)

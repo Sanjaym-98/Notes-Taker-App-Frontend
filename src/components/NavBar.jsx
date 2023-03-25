@@ -14,7 +14,7 @@ const NavBar = () => {
     console.log("token:", token);
 
     axios
-      .delete("http://localhost:5000/api/v1/notes", {
+      .delete("https://notesbackend-ware.onrender.com/api/v1/notes", {
         headers: {
           Authorization: token,
         },
