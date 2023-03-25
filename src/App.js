@@ -5,7 +5,9 @@ import Login from './components/Signin';
 import HomePage from './components/HomePage';
 import {BrowserRouter, Route, Routes} from 'react-router-dom' 
 import 'bootstrap/dist/css/bootstrap.css'
+import AddNotes from './components/AddNotes';
 function App() {
+
   return (
     <>
      <BrowserRouter>
@@ -13,6 +15,7 @@ function App() {
       <Route path='/' element={<Login/>} />
     <Route path='/signup' element={<SignUp/>}/>
     <Route path='/homepage' element={<HomePage/>}/>
+    <Route path="/addnote" element={<AddNotes />} />
       </Routes>
   </BrowserRouter>
     </>
