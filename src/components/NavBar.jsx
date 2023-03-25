@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,9 +34,9 @@ const NavBar = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Link to="/homepage" className="navbar-brand">Home</Link>
           <Nav className="me-auto">
-            <Nav.Link href="#home">AddNote</Nav.Link>
+            <Link to="/addnote" className="nav-link">AddNote</Link>
             <Nav.Link href="#features" onClick={handleDeleteAll}>
               {isLoading ? "Deleting..." : "DeleteAll"}
             </Nav.Link>
