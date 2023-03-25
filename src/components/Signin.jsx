@@ -25,7 +25,9 @@ const Login=()=>{
         }
     }
     return (
+        
         <div id="main">
+            <h1 className="head">Notes Taker App</h1>
         <div id="container">
            <div id="centre">
            <form onSubmit={handlesubmit}>

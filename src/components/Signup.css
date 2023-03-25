@@ -65,4 +65,8 @@
   .signUp:hover {
     background-color: rgba(227, 110, 120, 0.1);
   }
-  
+  .head {
+    color: #f9f9f9;
+    margin-left: auto;
+    margin-right: auto;
+  }

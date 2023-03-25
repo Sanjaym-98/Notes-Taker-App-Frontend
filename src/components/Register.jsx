@@ -32,6 +32,7 @@ const SignUp=()=>{
 
     return(
         <div id="main">
+            <h1 className="head">Notes Taker App</h1>
         <div id="container">
             <form onSubmit={handlesubmit}>
                 <div>
