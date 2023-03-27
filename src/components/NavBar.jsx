@@ -4,10 +4,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const NavBar = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate()
 
+  const handlelogout = () => {
+    console.log(localStorage)
+    localStorage.removeItem('userdetails')
+    console.log(localStorage.getItem("userdetails"))
+    localStorage.removeItem('token');
+    localStorage.clear()
+    navigate('/')
+}
   const handleDeleteAll = () => {
     setIsLoading(true);
 
@@ -41,6 +50,7 @@ const NavBar = () => {
               {isLoading ? "Deleting..." : "DeleteAll"}
             </Nav.Link>
             <Nav.Link href="#pricing">Export</Nav.Link>
+            <Nav.Link href="#pricing" onClick={handlelogout}>Logout</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
